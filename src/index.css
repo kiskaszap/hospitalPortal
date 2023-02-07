@@ -5,9 +5,84 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(67, 201, 212);
+    background: linear-gradient(90deg, rgba(67, 201, 212, 1) 35%, rgba(8, 154, 175, 1) 100%);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Navigation */
+
+
+.navigationLink {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navigationLink a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+
+}
+.header{
+  display: flex;
+  justify-content: end;
+  padding-right: 5%;
+}
+
+
+/* End of navigation */
+
+/* home page */
+
+.homeMain{
+  display: flex;
+  
+  flex-direction: column;
+  justify-content: space-between;
+  height: 85vh;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.homeH1{
+  
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding-bottom: 10%;
+  padding-left: 5%;
+}
+
+.homePic{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 20rem;
+}
+
+/* end of home page */
+
+/* login page */
+.loginMain{
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.mainInput{
+  margin-top: 5%;
+  border-radius: 30px;
+  height: 8vh;
+  width: 45vw;
+  border: none;
+}
+/* end of login page */
