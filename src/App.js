@@ -5,6 +5,7 @@ import Layout from './pages/Layout';
 import Department from './pages/Department';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Video from './components/Video';
 
 function App() {
   return (
@@ -29,6 +30,10 @@ function App() {
           <Route
             path='department'
             element={<Department />}
+          />
+          <Route
+            path='department/:name'
+            element={<Video />}
           />
         </Route>
       </Routes>

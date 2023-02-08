@@ -137,11 +137,7 @@ const Register = () => {
             />
             <br />
             <br />
-            <Inputs
-              type={'text'}
-              className={'loginInput'}
-              placeholder={'seggarc'}
-            />
+            
             <FileUpload />
             <button
               type='button'
