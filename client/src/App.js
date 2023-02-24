@@ -6,6 +6,7 @@ import Department from './pages/Department';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Video from './components/Video';
+import Profile from './pages/Profile';
 
 function App() {
   return (
@@ -30,6 +31,10 @@ function App() {
           <Route
             path='department'
             element={<Department />}
+          />
+          <Route
+            path='profile'
+            element={<Profile />}
           />
           <Route
             path='department/:name'

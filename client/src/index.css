@@ -217,37 +217,33 @@ code {
   height: 10rem;
   width: 20rem;
 }
-.departmentName{
+.departmentName {
   color: white;
 }
-.departmentButton{
-    margin-top: 1%;
-    border-radius: 30px;
-    height: 3vh;
-    width: 9vw;
-    border: none;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #0d8495;
-    color: white;
-
-    
+.departmentButton {
+  margin-top: 1%;
+  border-radius: 30px;
+  height: 3vh;
+  width: 9vw;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #0d8495;
+  color: white;
 }
-.departmentButtonSub{
+.departmentButtonSub {
   color: white;
   text-decoration: none;
 }
-.videoMain{
+.videoMain {
   display: flex;
   flex-direction: column;
-  
+
   justify-content: center;
   align-items: center;
-  height: 90vh
-  
-  
+  height: 90vh;
 }
-.videoSub{
+.videoSub {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -255,23 +251,81 @@ code {
   margin-right: 3%;
   margin-left: 3%;
 }
-.videoSub p{
+.videoSub p {
   padding-top: 3%;
   color: white;
   font-size: x-large;
 }
-.videoButton{
+.videoButton {
   margin-top: 1%;
-    border-radius: 30px;
-    height: 4vh;
-    width: 12vw;
-    border: none;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #0d8495;
-    color: white;
+  border-radius: 30px;
+  height: 4vh;
+  width: 12vw;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #0d8495;
+  color: white;
 }
 /* end of department page */
 
-/* modal */
-
+/* profile page */
+.profileMain {
+  display: block;
+  ;
+  color: black;
+}
+.profileSubDiv {
+  
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  width: 50%;
+  
+  height: 90vh;
+}
+.div1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.div1,.div2{
+  width: 45vw;
+  background-color: white;
+  padding:2rem
+}
+.profilePic img {
+  width: 15rem;
+  height: 15rem;
+}
+.profileData {
+  
+}
+.profileMedical {
+  
+  display: flex;
+  height: 90vh;
+  justify-content: center;
+  
+  flex-direction: column;
+  float: right;
+  width: 50%;
+}
+.profileDetails {
+  background-color: white
+}
+.patientDetails {
+  background-color: white
+}
+.fatherDetails {
+  background-color: white
+}
+.motherDetails {
+  background-color: white
+}
+.appointMent {
+  background-color: white
+}
+/* end of profile page */
