@@ -1,10 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import loginPic from '../graphics/loginPic.svg';
-import FileUpload from '../components/FileUpload';
-import Inputs from '../components/Inputs';
+import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
+
+import loginPic from '../graphics/loginPic.svg';
+
+
 
 const Register = () => {
+  const navigate = useNavigate();
   const [person, setPerson] = useState({
     name: '',
     date: '',
@@ -15,6 +19,7 @@ const Register = () => {
     mother: '',
     father: '',
     med: '',
+    image: '',
   });
   const [placeholder, setPlaceholder] = useState({
     name: 'Full name',
@@ -28,6 +33,8 @@ const Register = () => {
     med: 'Medical History',
   });
 
+ 
+
   const handleChange = (e) => {
     setPerson((prev) => {
       return {
@@ -38,9 +45,12 @@ const Register = () => {
   };
 
   const handleSubmit = async (e) => {
+    
     e.preventDefault();
+
     const personKeys = Object.keys(person);
     const missingValues = personKeys.filter((key) => !person[key]);
+
     const missingValuesObject = Object.assign(
       {},
       ...missingValues.map((k) => ({ [k]: 'Please fill this out' }))
@@ -52,6 +62,7 @@ const Register = () => {
         ...missingValuesObject,
       };
     });
+
     if (person.password !== person.rePassword) {
       const dontMatch = 'Passwords have to match';
       setPerson((prev) => {
@@ -69,6 +80,7 @@ const Register = () => {
         };
       });
     }
+
     if (
       person.name &&
       person.date &&
@@ -77,18 +89,35 @@ const Register = () => {
       person.phone &&
       person.mother &&
       person.father &&
-      person.med
+       person.med  
+      
     ) {
-      const registeredUser = person;
+      const registeredUser = {
+        name: person.name,
+        date: person.date,
+        email: person.email,
+        password: person.password,
+        phone: person.phone,
+        mother: person.mother,
+        father: person.father,
+        med: person.med,
+        
+      };
+      
+     
+
       axios
-        .post("http://localhost:4000/registration", {
-          registeredUser,
+        .post('http://localhost:4000/registration', registeredUser, {
+          headers: {
+            'Content-Type': 'application/json',
+          },
         })
         .then(function (response) {
           console.log(response);
+          
+          navigate('/login');
         });
     }
-
   };
 
   return (
@@ -197,7 +226,7 @@ const Register = () => {
             <br />
             <br />
 
-            <FileUpload placeholder='upload file' />
+            
             <button
               onClick={handleSubmit}
               type='button'

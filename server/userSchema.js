@@ -9,6 +9,9 @@ const userSchema = new mongoose.Schema({
   mother: String,
   father: String,
   med: String,
+  department: String,
+  appointment: String,
+  imagePath: String,
 });
 
 const User = mongoose.model('User', userSchema, 'users');

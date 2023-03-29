@@ -7,6 +7,7 @@ import { context } from '../components/Context';
 const Login = () => {
   const data = useContext(context);
   
+  
 
   const navigate = useNavigate();
   const [login, setLogin] = useState({ email: '', password: '' });
@@ -36,6 +37,7 @@ const Login = () => {
           if (response.data.isAuthenticated===true) {
             
             data.setData(response.data.isAuthenticated)
+            data.setIsloggedIn(true);
             navigate('/profile');
           }
         });

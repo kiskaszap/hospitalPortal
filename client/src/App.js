@@ -7,6 +7,8 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Video from './components/Video';
 import Profile from './pages/Profile';
+import Games from './pages/Games';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
@@ -37,8 +39,16 @@ function App() {
             element={<Profile />}
           />
           <Route
+            path='dashboard'
+            element={<Dashboard />}
+          />
+          <Route
             path='department/:name'
             element={<Video />}
+          />
+          <Route
+            path='games'
+            element={<Games />}
           />
         </Route>
       </Routes>
